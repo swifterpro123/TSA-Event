@@ -12,10 +12,16 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1905155736]
-position = Vector2(590, 307)
-scale = Vector2(2.4746094, 2.4746094)
+[node name="Background" type="TextureRect" parent="." unique_id=2012318780]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_l6cm7")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2074415953]
 layout_mode = 1
