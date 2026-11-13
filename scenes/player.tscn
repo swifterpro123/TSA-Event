@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://clw2nko2w8h6c"]
 
-[ext_resource type="Texture2D" uid="uid://3q4j7ybainet" path="res://assets/rocket.png" id="1_lj8jo"]
+[ext_resource type="Texture2D" uid="uid://3q4j7ybainet" path="res://assets/rocket.png" id="1_3vyb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmken"]
 size = Vector2(58, 71)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=691036457]
+[node name="Player" type="CharacterBody2D" unique_id=691036457]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1562197308]
-texture = ExtResource("1_lj8jo")
+texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1905336750]
 position = Vector2(0, 4.5)
