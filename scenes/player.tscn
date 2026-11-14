@@ -78,7 +78,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=749467972]
 sprite_frames = SubResource("SpriteFrames_kmken")
-animation = &"on"
+animation = &"off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1905336750]
 position = Vector2(0, 4.5)
