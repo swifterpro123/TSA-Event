@@ -1,23 +1,33 @@
 extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-var is_igniting: bool = false
+var is_boosting: bool = false
+
+# value is either on or off
+# handles animation between the states
+func animate_boost() -> void:
+	if sprite.animation == "off" and is_boosting:
+		sprite.speed_scale = 1.0
+		sprite.play("transition")
+	
+	elif sprite.animation == "on" and not is_boosting:
+		sprite.speed_scale = -1.0
+		sprite.play("transition", 1.0, true)
+		
+	if sprite.animation == "transition":
+		sprite.speed_scale = 1.0 if is_boosting else -1.0
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("ui_select"):
-		if sprite.animation == "off":
-			sprite.play("starting")
-			is_igniting = true
+	if Input.is_action_pressed("ui_accept"):
+		is_boosting = true
 	else:
-		if sprite.animation == "on":
-			sprite.play_backwards("starting")
-			is_igniting = false
+		is_boosting = false
+				
+	animate_boost()
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	if sprite.animation == "starting":
-		if is_igniting:
-			print("on")
+	if sprite.animation == "transition":
+		if is_boosting:
 			sprite.play("on")
 		else:
-			print("off")
 			sprite.play("off")
