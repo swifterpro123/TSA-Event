@@ -3,9 +3,9 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 var is_boosting: bool = false # used for animation
-var angular_acceleration: float = 0.3 
-var angular_friction: float = 0.01 # speed change when not accelerating
-var acceleration: float = 100
+var angular_acceleration: float = 0.1
+var angular_friction: float = 0.001 # speed change when not accelerating
+var acceleration: float = 10
 var friction: float = 1 # speed change when not accelerating
 
 var angular_velocity: float = 0
