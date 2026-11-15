@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bnbj07d2dw85t"]
 
+[ext_resource type="Script" uid="uid://bkr4hbkry5vbh" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://dsce6qm2u8i5o" path="res://assets/space background.png" id="1_l6cm7"]
 
 [node name="MainMenu" type="Control" unique_id=1512410086]
@@ -11,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_ekxnf")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2012318780]
 layout_mode = 1
@@ -41,3 +43,5 @@ text = "START!!!!!!!"
 [node name="more button!" type="Button" parent="CenterContainer/VBoxContainer" unique_id=732157480]
 layout_mode = 2
 text = "my super awesome 2nd button that I made because its super awesome and stuff (please change if it wasnt obvious enough)"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
