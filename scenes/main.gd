@@ -6,7 +6,7 @@ extends Node2D
 # main node should simply manage all of them
 # so please change everything here eventually, this is just placeholder stuff
 
-@onready var main_menu = $CanvasLayer/MainMenu
+@onready var main_menu: MainMenu = $MainMenu
 
-func _on_main_menu_start_pressed() -> void:
-	main_menu.hide()
+func _on_main_menu_start_button_pressed() -> void:
+	main_menu.disable()

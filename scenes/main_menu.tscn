@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://k1edp6n8nx3b"]
 
+[ext_resource type="Script" uid="uid://uyp6bmp2wphx" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="PackedScene" uid="uid://ppu5i7t05070" path="res://scenes/space_background.tscn" id="1_ekxnf"]
 [ext_resource type="PackedScene" uid="uid://bnbj07d2dw85t" path="res://scenes/main_menu_ui.tscn" id="2_bqqt6"]
 
 [node name="MainMenu" type="Node2D" unique_id=904568146]
+script = ExtResource("1_bqqt6")
 
 [node name="Background" parent="." unique_id=857109876 instance=ExtResource("1_ekxnf")]
 autoscroll = Vector2(50, 50)
@@ -11,3 +13,5 @@ autoscroll = Vector2(50, 50)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=951186715]
 
 [node name="MainMenuUI" parent="CanvasLayer" unique_id=1512410086 instance=ExtResource("2_bqqt6")]
+
+[connection signal="start_pressed" from="CanvasLayer/MainMenuUI" to="." method="_on_main_menu_ui_start_pressed"]

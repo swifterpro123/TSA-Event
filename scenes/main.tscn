@@ -7,3 +7,5 @@
 script = ExtResource("1_sugp2")
 
 [node name="MainMenu" parent="." unique_id=904568146 instance=ExtResource("1_o5qli")]
+
+[connection signal="start_button_pressed" from="MainMenu" to="." method="_on_main_menu_start_button_pressed"]
