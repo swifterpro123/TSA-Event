@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://b3ra3jejcfwjg"]
 
 [ext_resource type="PackedScene" uid="uid://ppu5i7t05070" path="res://scenes/space_background.tscn" id="1_rysn1"]
+[ext_resource type="PackedScene" uid="uid://clw2nko2w8h6c" path="res://scenes/player_rocket.tscn" id="2_c6rj5"]
 
 [node name="Space" type="Node2D" unique_id=1309842691]
 
 [node name="Background" parent="." unique_id=857109876 instance=ExtResource("1_rysn1")]
+
+[node name="PlayerRocket" parent="." unique_id=691036457 instance=ExtResource("2_c6rj5")]
