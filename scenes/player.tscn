@@ -133,4 +133,7 @@ autoplay = "off"
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_kmken")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1754308021]
+position_smoothing_enabled = true
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
