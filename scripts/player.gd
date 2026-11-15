@@ -2,16 +2,26 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var is_boosting: bool = false
+var is_boosting: bool = false # used for animation
+var rotational_acceleration: float = 100
+var acceleration: float = 100
 
-
+func _physics_process(delta: float) -> void:
+	var rotation_direction := Input.get_axis("rocket left", "rocket right")
+	rotation += rotation_direction * rotational_acceleration * delta
+	
+	var thrust_input := Input.get_axis("rocket down", "rocket up")
+	if thrust_input != 0.0:
+		velocity += transform.x * thrust_input * acceleration * delta
+	
+	move_and_slide()	
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("rocket boost"):
 		is_boosting = true
 	else:
 		is_boosting = false
-				
+			
 	animate_boost()
 
 func _on_animated_sprite_2d_animation_finished() -> void:
