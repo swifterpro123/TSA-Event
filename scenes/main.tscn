@@ -1,14 +1,6 @@
 [gd_scene format=3 uid="uid://boia3xi0ojype"]
 
-[ext_resource type="PackedScene" uid="uid://k1edp6n8nx3b" path="res://scenes/main_menu.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://c6p02btdl0y2r" path="res://scripts/main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://b3ra3jejcfwjg" path="res://scenes/space.tscn" id="3_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=1796540502]
 script = ExtResource("1_sugp2")
-
-[node name="Space" parent="." unique_id=1309842691 instance=ExtResource("3_sugp2")]
-
-[node name="MainMenu" parent="." unique_id=904568146 instance=ExtResource("1_o5qli")]
-
-[connection signal="start_button_pressed" from="MainMenu" to="." method="_on_main_menu_start_button_pressed"]
