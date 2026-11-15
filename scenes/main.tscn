@@ -11,7 +11,6 @@ script = ExtResource("1_sugp2")
 position = Vector2(563, 325)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1281519339]
-visible = false
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=1512410086 instance=ExtResource("1_o5qli")]
 
