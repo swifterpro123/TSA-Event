@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bnbj07d2dw85t"]
 
 [ext_resource type="Script" uid="uid://bkr4hbkry5vbh" path="res://scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://dsce6qm2u8i5o" path="res://assets/space background.png" id="1_l6cm7"]
 
 [node name="MainMenuUI" type="Control" unique_id=1512410086]
 layout_mode = 3
@@ -13,17 +12,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ekxnf")
-
-[node name="Background" type="TextureRect" parent="." unique_id=2012318780]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_l6cm7")
-expand_mode = 1
-stretch_mode = 6
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2074415953]
 layout_mode = 1

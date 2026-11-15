@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://k1edp6n8nx3b"]
+
+[ext_resource type="PackedScene" uid="uid://ppu5i7t05070" path="res://scenes/space_background.tscn" id="1_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://bnbj07d2dw85t" path="res://scenes/main_menu_ui.tscn" id="2_bqqt6"]
+
+[node name="MainMenu" type="Node2D" unique_id=904568146]
+
+[node name="Background" parent="." unique_id=857109876 instance=ExtResource("1_ekxnf")]
+autoscroll = Vector2(50, 50)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=951186715]
+
+[node name="MainMenuUI" parent="CanvasLayer" unique_id=1512410086 instance=ExtResource("2_bqqt6")]
