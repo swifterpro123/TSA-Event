@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b3ra3jejcfwjg"]
+
+[ext_resource type="Texture2D" uid="uid://dsce6qm2u8i5o" path="res://assets/space background.png" id="1_rysn1"]
+
+[node name="Space" type="Node2D" unique_id=1309842691]
+
+[node name="Background" type="Parallax2D" parent="." unique_id=324570629]
+repeat_size = Vector2(512, 512)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1967265817]
+texture = ExtResource("1_rysn1")
+centered = false
