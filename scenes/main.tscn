@@ -3,4 +3,6 @@
 [ext_resource type="Script" uid="uid://c6p02btdl0y2r" path="res://scripts/main.gd" id="1_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=1796540502]
+editor_description = "This node may look empty, but it very much is not!
+Script adds/removes children dynamically"
 script = ExtResource("1_sugp2")
