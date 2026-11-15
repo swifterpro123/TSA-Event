@@ -5,7 +5,8 @@ extends CharacterBody2D
 var is_boosting: bool = false # used for animation
 var angular_acceleration: float = 0.1
 var angular_friction: float = 0.001 # speed change when not accelerating
-var acceleration: float = 10
+var forward_acceleration: float = 10 
+var backward_acceleration: float = 5
 var friction: float = 1 # speed change when not accelerating
 
 var angular_velocity: float = 0
@@ -19,8 +20,10 @@ func _physics_process(delta: float) -> void:
 	rotation += angular_velocity
 	
 	var thrust_input := Input.get_axis("rocket down", "rocket up")
-	if thrust_input != 0:
-		velocity += -transform.y * thrust_input * acceleration
+	if thrust_input > 0:
+		velocity += -transform.y * thrust_input * forward_acceleration
+	elif thrust_input < 0:
+		velocity += -transform.y * thrust_input * backward_acceleration
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction)
 	
