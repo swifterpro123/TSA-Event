@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dthyxd42mvpfj"]
+
+[ext_resource type="Texture2D" uid="uid://coy86pb8qgm7q" path="res://assets/TEMPORARY interior.png" id="1_t2x3h"]
+[ext_resource type="PackedScene" uid="uid://qpmcai14o4tg" path="res://scenes/player_character.tscn" id="2_dtufl"]
+
+[node name="ShipInterior" type="Node2D" unique_id=1260485253]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1943880970]
+scale = Vector2(3.24754, 3.24754)
+texture = ExtResource("1_t2x3h")
+
+[node name="PlayerCharacter" parent="." unique_id=716616014 instance=ExtResource("2_dtufl")]
