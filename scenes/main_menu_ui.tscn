@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bnbj07d2dw85t"]
 
 [ext_resource type="Script" uid="uid://bkr4hbkry5vbh" path="res://scripts/main_menu_ui.gd" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://bsq2wc5h6gm3" path="res://fonts/PressStart2P-Regular.ttf" id="2_4pl3l"]
 
 [node name="MainMenuUI" type="Control" unique_id=1512410086]
 layout_mode = 3
@@ -13,23 +14,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ekxnf")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2074415953]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=414609917]
-layout_mode = 2
-
-[node name="Start" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2106955994]
-layout_mode = 2
-text = "START!!!!!!!"
-
-[node name="more button!" type="Button" parent="CenterContainer/VBoxContainer" unique_id=732157480]
-layout_mode = 2
-text = "my super awesome 2nd button that I made because its super awesome and stuff (please change if it wasnt obvious enough)"
-
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1665364699]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 587.0
+offset_right = 891.0
+offset_bottom = 613.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/bold_font = ExtResource("2_4pl3l")
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b][pulse freq=1 color=#ffffff00 ease=-2.0]PRESS ANY KEY TO CONTINUE[/pulse][/b]"

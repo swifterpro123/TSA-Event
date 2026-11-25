@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uyp6bmp2wphx" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="PackedScene" uid="uid://ppu5i7t05070" path="res://scenes/space_background.tscn" id="1_ekxnf"]
 [ext_resource type="PackedScene" uid="uid://bnbj07d2dw85t" path="res://scenes/main_menu_ui.tscn" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dniglwbmpstqb" path="res://assets/maintitle.png" id="4_wu84c"]
 
 [node name="MainMenu" type="Node2D" unique_id=904568146]
 script = ExtResource("1_bqqt6")
@@ -13,5 +14,10 @@ autoscroll = Vector2(50, 50)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=951186715]
 
 [node name="MainMenuUI" parent="CanvasLayer" unique_id=1512410086 instance=ExtResource("2_bqqt6")]
+
+[node name="MainTitle" type="Sprite2D" parent="." unique_id=1691213336]
+position = Vector2(575, 325)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_wu84c")
 
 [connection signal="start_pressed" from="CanvasLayer/MainMenuUI" to="." method="_on_main_menu_ui_start_pressed"]
